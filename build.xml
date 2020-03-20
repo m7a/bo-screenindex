@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="build">
+
+<!-- APPLICATION METADATA -->
+<property name="masysma.target" value="screenindex"/> 
+<property name="masysma.main"   value="ma.screenindex.Main"/> 
+<property name="mdpc.name"      value="mdvl-screenindex"/>
+<property name="mdpc.section"   value="java"/>
+<property name="mdpc.arch"      value="all"/>
+<property name="mdpc.descrs"    value="Record computer activity time"/>
+<property name="mdpc.depends"   value="default-jre"/>
+<property name="mdpc.conflicts" value="mdvl-java-applications (&lt;= 1.0.68)"/>
+<property name="mdpc.descrl">
+ Screenindex is a Java program to keep track of the usage times of the local
+ computer. It is started by using `screenindex -l` and stops tracking time
+ automatically once the associated process terminates.
+ .
+ Data is stored in an XML file for the current year and can be analyzed with
+ the `screenindex` commandline utility or suitable stylesheets.
+ See the documentation screenindex(32) for details.
+</property>
+
+<property name="mdpc.file.install">
+screenindex /usr/bin
+screenindex_log /usr/bin
+screenindex.jar /usr/share/java
+</property>
+
+<target name="build" depends="jar"/>
+
+<!-- CI INTEGRATION -->
+<target name="package_triggered" depends="package">
+	<property name="masysma.ci.trigger" value="newver"/>
+</target>
+
+<!-- CONSTANT TPL IMPORT -->
+<property environment="env"/>
+<condition property="masysma.internal.includepath.rel" value="${env.MDVL_CI_PHOENIX_ROOT}" else=".."><isset property="env.MDVL_CI_PHOENIX_ROOT"/></condition>
+<property name="masysma.internal.includepath" location="${masysma.internal.includepath.rel}"/>
+<property name="masysma.internal.loadpath" value="${masysma.internal.includepath}/co-build/ant-build-template.xml"/>
+<condition property="masysma.internal.load" value="file://${masysma.internal.loadpath}" else="https://raw.githubusercontent.com/m7a/co-build/master/ant-build-template.xml"><resourceexists><file file="${masysma.internal.loadpath}"/></resourceexists></condition>
+<import><url url="${masysma.internal.load}"/></import>
+
+</project>

@@ -1,0 +1,6 @@
+#!/bin/sh -e
+# Obsolete Screenindex Helper Script 2.0, Copyright (c) 2013, 2020 Ma_Sys.ma.
+# For further info send an e-mail to Ma_Sys.ma@web.de
+
+echo "WARNING: Obsolete script invoked: $0"
+exec /usr/bin/screenindex -l -g

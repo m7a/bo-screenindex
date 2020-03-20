@@ -1,0 +1,6 @@
+#!/bin/sh -e
+rm -R documentation || true
+mkdir documentation
+javadoc -private -verbose -d documentation -version -windowtitle \
+			"Screenindex Documentation" -author ma.screenindex \
+			> documentation/log.txt

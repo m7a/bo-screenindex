@@ -1,0 +1,13 @@
+#!/bin/sh -e
+# Screenindex Helper Script 3.0, Copyright (c) 2013, 2020 Ma_Sys.ma.
+# For further info send an e-mail to Ma_Sys.ma@web.de
+
+if [ ! -d "$HOME/.mdvl/screenindex" ]; then
+	echo Screenindex is not yet installed.
+	echo Installing...
+	mkdir -p "$HOME/.mdvl/screenindex/db" || exit 1
+	echo Screenindex was successfully installed. It will now be started.
+fi
+
+cd "$HOME/.mdvl/screenindex"
+exec java -cp /usr/share/java/screenindex.jar ma.screenindex.Main "$@"
