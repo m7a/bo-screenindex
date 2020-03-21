@@ -1,3 +1,9 @@
+mdvl-screenindex (1.0.2) stable; urgency=medium
+
+  * Add `q` script.
+
+ -- Linux-Fan, Ma_Sys.ma <Ma_Sys.ma@web.de>  Sat, 21 Mar 2020 18:45:43 +0100
+
 mdvl-screenindex (1.0.1) stable; urgency=medium
 
   * Update to include fixed `screeindex_term` script.

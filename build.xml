@@ -2,15 +2,16 @@
 <project default="build">
 
 <!-- APPLICATION METADATA -->
-<property name="masysma.target" value="screenindex"/> 
-<property name="masysma.main"   value="ma.screenindex.Main"/> 
-<property name="mdpc.name"      value="mdvl-screenindex"/>
-<property name="mdpc.section"   value="java"/>
-<property name="mdpc.arch"      value="all"/>
-<property name="mdpc.descrs"    value="Record computer activity time"/>
-<property name="mdpc.depends"   value="default-jre"/>
+<property name="masysma.target"  value="screenindex"/> 
+<property name="masysma.main"    value="ma.screenindex.Main"/> 
+<property name="mdpc.name"       value="mdvl-screenindex"/>
+<property name="mdpc.section"    value="java"/>
+<property name="mdpc.arch"       value="all"/>
+<property name="mdpc.descrs"     value="Record computer activity time"/>
+<property name="mdpc.depends"    value="default-jre"/>
+<property name="mdpc.recommends" value="zenity"/>
 <property name="mdpc.conflicts">mdvl-java-applications (&lt;= 1.0.68),
-				mdvl-scripts (&lt;= 1.0.370)</property>
+				mdvl-scripts (&lt;= 1.0.371)</property>
 <property name="mdpc.descrl">
  Screenindex is a Java program to keep track of the usage times of the local
  computer. It is started by using `screenindex -l` and stops tracking time
@@ -22,6 +23,7 @@
 </property>
 
 <property name="mdpc.file.install">
+q /usr/bin
 screenindex /usr/bin
 screenindex_log /usr/bin
 screenindex_term /usr/bin
