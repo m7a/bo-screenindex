@@ -188,4 +188,17 @@ _TODO FEHLT_
 Ideen für eine neue Screen Index Version
 ========================================
 
-_TODO FEHLT_
+_TODO UNVOLLSTÄNDIG_
+
+ * Weniger Arbeitsspeicherverbrauch und Hintergrundaktivitäten durch Wahl einer
+   systemnahen Programmiersprache ohne GC
+ * Datenablage in geeigneterem Format, nicht die ganze Datenbank dauerhaft in
+   den Arbeitsspeicher laden
+ * Vollständige Unterstützung für Zeitzonen und andere Datumsformate
+ * Datensparsame automatische Erfassung genutzer Anwendungen mit Hilfe von
+   Kategorie-Regelwerken
+ * Möglichkeit zur expliziten Projekt-Zeiterfassung --
+   Nachrichten mit dem Datum+Uhrzeit des Hinzufügens versehen.
+ * Informativere Auswertungsmöglichkeiten
+ * Integration mit Erfassung der Nutzung von Rechenleistung zur Vorhersage
+   zukünftigen Hardwarebedarfes?

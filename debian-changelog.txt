@@ -1,3 +1,9 @@
+mdvl-screenindex (1.0.1) stable; urgency=medium
+
+  * Update to include fixed `screeindex_term` script.
+
+ -- Linux-Fan, Ma_Sys.ma <Ma_Sys.ma@web.de>  Sat, 21 Mar 2020 13:35:17 +0100
+
 mdvl-screenindex (1.0.0) stable; urgency=medium
 
   * Package created with MDPC 2

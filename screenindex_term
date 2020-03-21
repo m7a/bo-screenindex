@@ -1,0 +1,16 @@
+#!/bin/sh -e
+# Ma_Sys.ma Screenindex Termination Script 1.1.0.2,
+# Copyright (c) 2013, 2014, 2020 Ma_Sys.ma.
+# For further info send an e-mail to Ma_Sys.ma@web.de.
+
+recognize="java -cp /usr/share/java/screenindex.jar ma.screenindex.Main"
+# make sure there are enough columns to write process list
+pid="$(COLUMNS=512 ps -A -u "$(id -u)" -o pid,args | sed 's/^ \+//g' | \
+		sed '/grep -F/d' | grep -F "$recognize" | cut -d " " -f 1)"
+
+if [ -z "$pid" ]; then
+	echo Screenindex not running
+	exit 1
+else
+	kill -s TERM "$pid"
+fi

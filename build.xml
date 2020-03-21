@@ -9,7 +9,8 @@
 <property name="mdpc.arch"      value="all"/>
 <property name="mdpc.descrs"    value="Record computer activity time"/>
 <property name="mdpc.depends"   value="default-jre"/>
-<property name="mdpc.conflicts" value="mdvl-java-applications (&lt;= 1.0.68)"/>
+<property name="mdpc.conflicts">mdvl-java-applications (&lt;= 1.0.68),
+				mdvl-scripts (&lt;= 1.0.370)</property>
 <property name="mdpc.descrl">
  Screenindex is a Java program to keep track of the usage times of the local
  computer. It is started by using `screenindex -l` and stops tracking time
@@ -23,6 +24,7 @@
 <property name="mdpc.file.install">
 screenindex /usr/bin
 screenindex_log /usr/bin
+screenindex_term /usr/bin
 screenindex.jar /usr/share/java
 </property>
 
