@@ -391,7 +391,7 @@ erläutert:
 ~~~
 
 Der Aufbau der Datei sollte weitgehend selbsterklärend sein. Für die Jahresdatei
-gibt es ein `stat`-Element, welches das Jahr der Betrachtung explizit im
+gibt es ein `stats`-Element, welches das Jahr der Betrachtung explizit im
 Attribut `year` angibt (es lässt sich alternativ aus dem Dateinamen ermitteln).
 Innerhalb des Dokuments befindet sich ein `month`-Element für jeden Monat. In
 jedem Momantselement befindet sich dann ein `day`-Element für jeden Tag, wobei
