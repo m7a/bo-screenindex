@@ -1,9 +1,9 @@
 #!/bin/sh -e
-# Terminate screenindex and lock screensaver, Copyright (c) 2016 Ma_Sys.ma.
+# Terminate screenindex and lock screensaver, Copyright (c) 2016, 2021 Ma_Sys.ma
 # For further info send an e-mail to Ma_Sys.ma@web.de.
 
 if [ "$1" = "--help" ]; then
-	echo "Usage $0 [--noscreensaver]"
+	echo "Usage $0 [--noscreensaver|--tr]"
 	exit 0
 fi
 
@@ -19,9 +19,15 @@ reenable_question() {
 	exec /usr/bin/screenindex -l
 }
 
-screenindex_term || exit $?
+screenindex_term
+
 if [ "$1" = "--noscreensaver" ]; then
-	killall xscreensaver && reenable_question scr &
+	killall xscreensaver
+	reenable_question scr &
+elif [ "$1" = "--tr" ]; then
+	killall xscreensaver || true
+	reenable_question scr &
+	exec /usr/bin/xtrlock
 else
 	reenable_question &
 	exec /usr/bin/xscreensaver-command -lock

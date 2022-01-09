@@ -9,7 +9,7 @@
 <property name="mdpc.arch"       value="all"/>
 <property name="mdpc.descrs"     value="Record computer activity time"/>
 <property name="mdpc.depends"    value="default-jre"/>
-<property name="mdpc.recommends" value="zenity"/>
+<property name="mdpc.recommends" value="zenity, xtrlock"/>
 <property name="mdpc.conflicts">mdvl-java-applications (&lt;= 1.0.68),
 				mdvl-scripts (&lt;= 1.0.371)</property>
 <property name="mdpc.descrl">
